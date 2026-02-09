@@ -30,7 +30,7 @@ The implementation is developed in **Python** and tested inside a physics-based 
 
 ## 🧠 Skills & Concepts Demonstrated
 
-- Fuzzy inference systems (Mamdani / Sugeno)
+- Fuzzy inference systems 
 - Membership function design
 - Rule base construction
 - Defuzzification methods
@@ -47,26 +47,6 @@ The implementation is developed in **Python** and tested inside a physics-based 
 ## Goal
 Move the manipulator end-effector toward a **fixed point** in space.
 
-## Inputs (examples)
-- Joint angles  
-- Joint velocities  
-- Distance to target  
-
-## Fuzzy Design
-
-Typical linguistic variables:
-
-- Distance → *near*, *medium*, *far*
-- Joint speed → *slow*, *normal*, *fast*
-
-## Outputs
-- Motion commands  
-- Velocity adjustments  
-
-## Evaluation
-- Accuracy of reaching the target  
-- Smoothness of motion  
-- Stability of the controller  
 
 ---
 
@@ -81,17 +61,6 @@ Enhance the controller to:
 - detect obstacles  
 - avoid collisions  
 
-## Additional Inputs
-- Distance to nearest obstacle  
-- Relative motion information  
-
-## Example Rules
-- If obstacle is **very close** → reduce speed.
-- If obstacle is **close** and target is far → change direction.
-- If obstacle is **far** and target is near → increase speed.
-
-## Expected Behavior
-The robot should reach the goal while maintaining safe clearance.
 
 ---
 
@@ -107,16 +76,7 @@ Operate in a more realistic scenario including:
 - speed constraints  
 - workspace boundaries  
 
-## Controller Requirements
-The system must **prioritize multiple objectives simultaneously**:
 
-- follow moving targets  
-- avoid collisions  
-- respect joint limits  
-- maintain smooth trajectories  
-
-## Advanced Rule Design
-Rules may adapt priorities dynamically depending on the situation.
 
 ---
 
@@ -127,7 +87,7 @@ Rules may adapt priorities dynamically depending on the situation.
 1. Fuzzification of sensory inputs.
 2. Rule evaluation.
 3. Aggregation of outputs.
-4. Defuzzification (e.g., centroid method).
+4. Defuzzification.
 5. Apply commands to joints.
 
 ---
